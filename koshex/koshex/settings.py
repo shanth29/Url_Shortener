@@ -1,5 +1,4 @@
 from pathlib import Path
-import django_heroku
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -113,7 +112,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
-
-# Activate Heroku settings
-django_heroku.settings(locals())
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'staticfiles')]
