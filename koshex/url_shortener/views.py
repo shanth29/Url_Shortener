@@ -54,7 +54,7 @@ def get_long_url(request):
                     total_hits = total_hits.total_hits
                     get_total_hour = calculate_time(short_url)
                     if int(get_total_hour) > 0:
-                        hourly_hit = total_hits//get_total_hour
+                        hourly_hit = total_hits//int(get_total_hour)
                     else:
                         hourly_hit = total_hits
                     return Response({'message':'Url executed !!!','total_hits':total_hits, 'hourly_hits':hourly_hit},status=status.HTTP_201_CREATED)
